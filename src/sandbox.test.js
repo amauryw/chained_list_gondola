@@ -1,8 +1,8 @@
 const { createGraph } = require("./graph/createGraph");
 const { printGraph } = require("./graph/printGraph");
 const { navigate } = require("./navigation/navigate");
+const { resetTo } = require("./navigation/resetTo");
 
-const RESET_WANTED = true;
 const state = createGraph([
   { name: "0" },
   { name: "wanted" },
@@ -15,4 +15,4 @@ printGraph(state);
 
 navigate(state, "pos", "wanted");
 
-// navigate(state, "pos", "wanted", RESET_WANTED);
+resetTo(state, "wanted");
