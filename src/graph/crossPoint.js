@@ -9,6 +9,8 @@ class CrossPoint {
     this.prev = null; // insert address of prev sceen
     this.content = "1"; // insert ReactComponent here
     this.number = 0; // number in graph
+    this.goBackFunc = () => definition.goBackFunc(definition.name);
+    this.goAheadFunc = () => definition.goAheadFunc(definition.name);
   }
 }
 

@@ -1,7 +1,7 @@
 const {
   seekCurrentState,
-  navigateAhead,
-  navigateBehind
+  navigateAheadToState,
+  navigateBehindToState
 } = require("../graphNavUtils");
 
 const { checkNavigationOrder } = require("./checkNavigationOrder");
@@ -12,8 +12,8 @@ const navigate = (state, pos, wanted) => {
     checkNavigationOrder(pos, wanted);
     const { currentState, match } = seekCurrentState(state, pos, wanted);
     return match
-      ? navigateBehind(currentState, wanted)
-      : navigateAhead(currentState, wanted);
+      ? navigateBehindToState(currentState, wanted)
+      : navigateAheadToState(currentState, wanted);
   } catch (error) {
     return navigationExceptionManager(error, pos);
   }

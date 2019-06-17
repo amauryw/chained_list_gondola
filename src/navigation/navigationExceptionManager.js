@@ -21,7 +21,7 @@ const navigationExceptionManager = (error, pos, wanted) => {
       break;
     }
     default: {
-      console.log("Oops, something wrong happen");
+      console.log("Oops, something wrong happen", { error });
     }
   }
 };

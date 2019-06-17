@@ -3,12 +3,20 @@ const { printGraph } = require("./graph/printGraph");
 const { navigate } = require("./navigation/navigate");
 const { resetTo } = require("./navigation/resetTo");
 
+goBackLog = value => {
+  console.log(`exec back from ${value}`);
+};
+
+goAheadsLog = value => {
+  console.log(`exec ahead from ${value}`);
+};
+
 const state = createGraph([
-  { name: "0" },
-  { name: "wanted" },
-  { name: "1" },
-  { name: "2" },
-  { name: "pos" }
+  { name: "0", goBackFunc: goBackLog, goAheadFunc: goAheadsLog },
+  { name: "wanted", goBackFunc: goBackLog, goAheadFunc: goAheadsLog },
+  { name: "1", goBackFunc: goBackLog, goAheadFunc: goAheadsLog },
+  { name: "2", goBackFunc: goBackLog, goAheadFunc: goAheadsLog },
+  { name: "pos", goBackFunc: goBackLog, goAheadFunc: goAheadsLog }
 ]);
 
 printGraph(state);

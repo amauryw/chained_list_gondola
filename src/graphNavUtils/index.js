@@ -1,9 +1,9 @@
 const { seekCurrentState } = require("./seekCurrentState");
-const { navigateAhead } = require("./navigateAhead");
-const { navigateBehind } = require("./navigateBehind");
+const { navigateAheadToState } = require("./navigateAhead");
+const { navigateBehindToState } = require("./navigateBehind");
 
 module.exports = {
   seekCurrentState,
-  navigateAhead,
-  navigateBehind
+  navigateAheadToState,
+  navigateBehindToState
 };
