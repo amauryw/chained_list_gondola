@@ -9,7 +9,7 @@ const { navigationExceptionManager } = require("./navigationExceptionManager");
 
 const navigate = (state, pos, wanted) => {
   try {
-    checkNavigationOrder(pos, wanted);
+    checkNavigationOrder(state, pos, wanted);
     const { currentState, match } = seekCurrentState(state, pos, wanted);
     return match
       ? navigateBehindToState(currentState, wanted)
