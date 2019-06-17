@@ -19,8 +19,11 @@ const state = createGraph([
   { name: "pos", goBackFunc: goBackLog, goAheadFunc: goAheadsLog }
 ]);
 
+console.log("Chained List looks like, item by item :\n");
 printGraph(state);
 
+console.log("\nNav to wanted:\n");
 navigate(state, "pos", "wanted");
 
+console.log("\nReset to wanted:\n");
 resetTo(state, "wanted");
