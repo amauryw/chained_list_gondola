@@ -9,7 +9,7 @@ const createGraph = list => {
   let start = null;
   if (!list) return null;
   for (let index = 0; index < list.length; index++) {
-    newCrossPoint = new CrossPoint(list[index]);
+    newCrossPoint = new CrossPoint(list[index], index);
     if (index === 0) start = newCrossPoint;
     if (prevCrossPoint) {
       prevCrossPoint.next = newCrossPoint;
